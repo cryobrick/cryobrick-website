@@ -8,7 +8,7 @@ interface ThemeProviderProps {
   disableTransitionOnChange?: boolean;
 }
 
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+export function ThemeProvider({ children }: ThemeProviderProps) {
   // Simple theme provider - just pass through children
   // For a static site, we don't need complex theme switching
   return <>{children}</>;
