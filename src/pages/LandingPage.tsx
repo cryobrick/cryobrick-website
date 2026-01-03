@@ -13,6 +13,7 @@ import {
   Github,
   Mail,
   MessageCircle,
+  Youtube,
 } from "lucide-react";
 import cryobrickImage from "/images/cryobrick.png";
 import cryobrickLogo from "/images/cryobrick_text_logo.png";
@@ -302,6 +303,15 @@ export default function LandingPage() {
                 title="Discord"
               >
                 <MessageCircle className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.youtube.com/@cryobrick"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                title="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
               </a>
               <a
                 href="mailto:cryobrick@gmail.com"
