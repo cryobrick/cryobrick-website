@@ -11,6 +11,7 @@ import {
   Twitter,
   Github,
   Mail,
+  MessageCircle,
 } from "lucide-react";
 import cryobrickImage from "/images/cryobrick.png";
 
@@ -247,23 +248,25 @@ export default function LandingPage() {
             </div>
             <div className="flex items-center gap-6 mt-8">
               <a
-                href="https://twitter.com"
+                href="https://x.com/cryobrick"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
-                title="Twitter"
+                title="X / Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://primal.net/p/nprofile1qqswztflqlv5ja2ajaxp8p4skak7ux54heavzcplqpvq6vlvd0v32es24l53r"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 title="Nostr"
               >
                 <Zap className="w-5 h-5 fill-current" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/cryobrick"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -272,7 +275,16 @@ export default function LandingPage() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contact@cryobrick.com"
+                href="https://discord.gg/YGCXhfkbsA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                title="Discord"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:cryobrick@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 title="Email"
               >
