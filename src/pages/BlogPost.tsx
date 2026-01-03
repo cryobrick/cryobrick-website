@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft } from "lucide-react";
 import manifestoContent from "../content/manifesto.md?raw";
+import cryobrickLogo from "/images/cryobrick_text_logo.png";
 import "./BlogPost.css";
 
 export default function BlogPost() {
   const navigate = useNavigate();
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   return (
     <div className="min-h-screen bg-background font-sans">
@@ -19,8 +22,20 @@ export default function BlogPost() {
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </button>
-          <div className="flex flex-col items-end">
-            <span className="text-xl font-bold tracking-tight">Cryobrick</span>
+          <div className="flex flex-col items-end relative min-h-[1.5rem]">
+            {!logoLoaded && (
+              <span className="text-xl font-bold tracking-tight absolute">
+                Cryobrick
+              </span>
+            )}
+            <img
+              src={cryobrickLogo}
+              alt="Cryobrick"
+              className={`h-6 w-auto transition-opacity duration-300 ${
+                logoLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoad={() => setLogoLoaded(true)}
+            />
             <span className="text-[10px] text-muted-foreground uppercase tracking-widest leading-none">
               Bitcoin Wallet
             </span>

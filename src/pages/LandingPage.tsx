@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import {
   Shield,
   Smartphone,
@@ -14,15 +15,29 @@ import {
   MessageCircle,
 } from "lucide-react";
 import cryobrickImage from "/images/cryobrick.png";
+import cryobrickLogo from "/images/cryobrick_text_logo.png";
 
 export default function LandingPage() {
+  const [logoLoaded, setLogoLoaded] = useState(false);
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/20">
       {/* Navigation */}
       <nav className="border-b border-border bg-secondary/50 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight">Cryobrick</span>
+          <div className="flex flex-col relative min-h-[1.5rem]">
+            {!logoLoaded && (
+              <span className="text-xl font-bold tracking-tight absolute">
+                Cryobrick
+              </span>
+            )}
+            <img
+              src={cryobrickLogo}
+              alt="Cryobrick"
+              className={`h-6 w-auto transition-opacity duration-300 ${
+                logoLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoad={() => setLogoLoaded(true)}
+            />
             <span className="text-[10px] text-muted-foreground uppercase tracking-widest leading-none">
               Bitcoin Wallet
             </span>
