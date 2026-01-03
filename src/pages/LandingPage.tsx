@@ -221,9 +221,14 @@ export default function LandingPage() {
               </span>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="w-full sm:w-auto bg-primary text-primary-foreground px-12 py-5 rounded-sm font-bold text-xl hover:bg-primary/90 transition-all border-b-4 border-black/20">
+              <a
+                href="https://discord.gg/YGCXhfkbsA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto bg-primary text-primary-foreground px-12 py-5 rounded-sm font-bold text-xl hover:bg-primary/90 transition-all border-b-4 border-black/20"
+              >
                 Join the Resistance
-              </button>
+              </a>
               <Link
                 to="/manifesto"
                 className="w-full sm:w-auto bg-transparent border-2 border-background/20 text-background px-12 py-5 rounded-sm font-bold text-xl hover:bg-background/10 transition-all"
