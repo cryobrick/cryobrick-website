@@ -85,7 +85,7 @@ export default function Landing() {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-10 leading-relaxed">
-              Air-gapped custody on your feature phone. Zero cost. No shipping.
+              Air-gapped custody on your feature phone. Zero cost.
               Plausible deniability built in.
             </p>
 
