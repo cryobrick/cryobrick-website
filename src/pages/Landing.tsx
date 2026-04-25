@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Twitter,
   Github,
@@ -9,6 +10,7 @@ import {
 } from "lucide-react";
 import cryobrickImage from "/images/cryobrick.png";
 import cryobrickLogo from "/images/cryobrick_text_logo.png";
+import DonateDialog from "@/components/DonateDialog";
 
 const ORDER_URL =
   "https://formstr.app/f/naddr1qvzqqqr4mqpzqlvenjpv3w86ekdu5h65c9u84vrp8c3vxpmqjf0ghqqkfc6yy6zzqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qqxfdtykn3nv58dvg2c?viewKey=8828066e31c005b9f783baefe53d20cfe632834f770e19487e1bf25bedf83c62";
@@ -89,15 +91,24 @@ export default function Landing() {
               Plausible deniability built in.
             </p>
 
-            {/* Order Now button */}
-            <a
-              href={ORDER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground px-10 py-4 rounded-sm text-lg font-bold hover:bg-primary/90 transition-all border-b-4 border-primary/30 active:border-b-0 active:translate-y-1 inline-block"
-            >
-              Order Now
-            </a>
+            {/* CTA row */}
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+              <a
+                href={ORDER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-10 py-4 rounded-sm text-lg font-bold hover:bg-primary/90 transition-all border-b-4 border-primary/30 active:border-b-0 active:translate-y-1 inline-block"
+              >
+                Order Now
+              </a>
+              <DonateDialog />
+              <Link
+                to="/roadmap"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Roadmap →
+              </Link>
+            </div>
 
             {/* Social links */}
             <div className="mt-12">
